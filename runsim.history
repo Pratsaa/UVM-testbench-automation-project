@@ -1,0 +1,2 @@
+Tue Aug  5 00:16:48 PDT 2025 - /project/ai/bugatti/users/pratyush/common_ip_17june/common/vip/scripts/runsim.sh -b build -t newtest_test -r +sim_test_seq_name=newtest_basic_seq o dl_sync_fifo_reg_rd_wr_test
+
