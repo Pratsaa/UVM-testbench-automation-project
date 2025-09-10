@@ -1,0 +1,2 @@
+Wed Aug 13 03:14:07 PDT 2025 - /project/ai/bugatti/users/pratyush/common_ip_17june/common/vip/scripts/runsim.sh -b build -t finaltest1_test -r +sim_test_seq_name=finaltest1_basic_seq -o design_file_1
+

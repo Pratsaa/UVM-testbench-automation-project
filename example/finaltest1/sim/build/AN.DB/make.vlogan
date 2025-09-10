@@ -1,0 +1,77 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -l vlogan.log -full64 -sverilog -ntb_opts uvm-ieee-2020 +incdir+/software/synopsys/vcs/W-2024.09/etc/uvm/vcs/wrap +incdir+/software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020 -timescale=1ns/100ps +define+USE_BEH_MEM +libext+.sv+.v +incdir+../../../../common/ip/dl_mem/rtl +incdir+../../../../common/ip/dl_fifo/rtl +incdir+../../../../common/ip/dl_regs/rtl +incdir+../../../../common/ip/dl_misc/rtl +incdir+./ +incdir+../../../../../common/vip/clock_controller +incdir+../../../../../common/vip/misc +incdir+../../tb +incdir+../../tb/alu_agent +incdir+../../tb/dma_agent +incdir+../../tb/uart_agent +incdir+../../tests +define++UVM_PACKER_MAX_BYTES=10000 +define+UVM_DISABLE_AUTO_ITEM_RECORDING +incdir+/software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/vcs +incdir+../../../../common/ip/dl_misc/rtl +incdir+../../../../common/ip/dl_fifo/rtl -y ../../../../common/ip/dl_misc/rtl -y ../../../../common/ip/dl_fifo/rtl +incdir+../../../../common/vip/src/ -y ../../../../common/vip/src/ +incdir+../../tests/dl_async_fifo_ft_test +incdir+/software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/vcs +incdir+/software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/verdi -y ../../tests -y ../../../../common/vip/ -sverilog +define+UVM_DIRECTC_OPTS -full64
+
+all :		_VCSgd_EpLhdd_1.db \
+	_VCSgd_R4kEp_1.db \
+	_VCSgd_X8elXc_1.db \
+	_VCSgd_ZmrAOd_1.db \
+	_VCSgd_9y0KWd_1.db \
+	_VCSgd_UTQx6_1.db \
+	_VCSgd_xlKDAb_1.db \
+	_VCSgd_bE2ihb_1.db \
+	_VCSgd_ZjhH4_1.db \
+	_VCSgd_2Qfjqb_1.db \
+	_VCSgd_jSXBAe_1.db \
+	_VCSgd_mD8AP_1.db \
+	_VCSgd_ZNrSSb_1.db \
+	_VCSgd_0pZpWd_1.db \
+
+
+
+_VCSgd_EpLhdd_1.db :	../../../stub_dut.sv 
+		${VLOGAN}  ${VLOGAN_OPT} ../../../stub_dut.sv
+
+
+_VCSgd_R4kEp_1.db :	/software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/uvm_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/uvm_pkg.sv
+
+
+_VCSgd_X8elXc_1.db :	/software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/vcs/msglog.svh 
+		${VLOGAN}  ${VLOGAN_OPT} /software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/vcs/msglog.svh
+
+
+_VCSgd_ZmrAOd_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/alu_agent/alu_agent_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/alu_agent/alu_agent_pkg.sv
+
+
+_VCSgd_9y0KWd_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/dma_agent/dma_agent_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/dma_agent/dma_agent_pkg.sv
+
+
+_VCSgd_UTQx6_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/uart_agent/uart_agent_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/uart_agent/uart_agent_pkg.sv
+
+
+_VCSgd_xlKDAb_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/tb_pkg.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/tb_pkg.sv
+
+
+_VCSgd_bE2ihb_1.db :	/software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/vcs/uvm_custom_install_vcs_recorder.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/vcs/uvm_custom_install_vcs_recorder.sv
+
+
+_VCSgd_ZjhH4_1.db :	/software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/verdi/uvm_custom_install_verdi_recorder.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/verdi/uvm_custom_install_verdi_recorder.sv
+
+
+_VCSgd_2Qfjqb_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/alu_agent/alu_if.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/alu_agent/alu_if.sv
+
+
+_VCSgd_jSXBAe_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/dma_agent/dma_if.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/dma_agent/dma_if.sv
+
+
+_VCSgd_mD8AP_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/uart_agent/uart_if.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/uart_agent/uart_if.sv
+
+
+_VCSgd_ZNrSSb_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/tb_top.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/tb_top.sv
+
+
+_VCSgd_0pZpWd_1.db :	/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/finaltest1_harness.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/finaltest1_harness.sv
+
+

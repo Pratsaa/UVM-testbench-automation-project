@@ -1,0 +1,5 @@
+{"comelab":{"timestamp_begin":1755080049.619140764, "rt":15.43, "ut":11.49, "st":1.53}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1755080049.125930663}
+{"VCS_COMP_START_TIME": 1755080049.125930663}
+{"VCS_COMP_END_TIME": 1755080065.100055158}
+{"VCS_USER_OPTIONS": "-full64 -lca -licqueue -sverilog -ntb_opts uvm-ieee-2020 -xlrm floating_pnt_constraint -timescale=1ns/100ps -debug_access+all -debug_region=cell+lib tb_top -l compile.log +warn=noSVA-TIDE +warn=noLOOP-REROLL-ENABLED -sv_net_ports=packed -timescale=1ns/1ps"}

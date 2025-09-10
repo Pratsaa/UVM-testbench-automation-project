@@ -1,0 +1,83 @@
+Command: vcs -full64 -lca -licqueue -sverilog -ntb_opts uvm-ieee-2020 -xlrm floating_pnt_constraint \
+-timescale=1ns/100ps -debug_access+all -debug_region=cell+lib tb_top -l compile.log \
++warn=noSVA-TIDE +warn=noLOOP-REROLL-ENABLED -sv_net_ports=packed -timescale=1ns/1ps \
+
+
+Warning-[LCA_FEATURES_ENABLED] Usage warning
+  LCA features enabled by '-lca' argument on the command line.  For more 
+  information regarding list of LCA features please refer to Chapter "LCA 
+  features" in the VCS Release Notes
+
+Doing common elaboration 
+                         Chronologic VCS (TM)
+         Version W-2024.09_Full64 -- Wed Aug 13 03:14:10 2025
+
+                    Copyright (c) 1991 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Top Level Modules:
+       uvm_custom_install_recording
+       uvm_custom_install_verdi_recording
+       tb_top
+TimeScale is 1 ns / 100 ps
+
+Warning-[TFIPC] Too few instance port connections
+/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/../../tb/tb_top.sv, 41
+tb_top, "stub_dut dut();"
+  The above instance has fewer port connections than the module definition.
+  Please use '+lint=TFIPC-L' to print out detailed information of unconnected 
+  ports.
+
+Starting vcs inline pass...
+15 modules and 0 UDP read.
+recompiling package vcs_paramclassrepository
+recompiling package uvm_pkg
+recompiling package _vcs_msglog
+recompiling module uvm_custom_install_recording
+recompiling package _vcs_DPI_package
+recompiling module uvm_custom_install_verdi_recording
+recompiling package dma_agent_pkg
+recompiling package uart_agent_pkg
+recompiling package alu_agent_pkg
+recompiling package tb_pkg
+recompiling module tb_top
+recompiling module dma_if
+recompiling module uart_if
+recompiling module alu_if
+recompiling module finaltest1_harness
+All of 15 modules done
+make[1]: Entering directory '/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/csrc' \
+
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+g++ -w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -O -I/software/synopsys/vcs/W-2024.09/include \
+-c /software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/dpi/uvm_dpi.cc
+g++ -w  -pipe -DVCSMX -DUVM_DPI_DO_TYPE_CHECK -fPIC -O -I/software/synopsys/vcs/W-2024.09/include \
+-c /software/synopsys/vcs/W-2024.09/etc/uvm-ieee-2020/verdi/dpi/uvm_verdi_dpi.cpp \
+
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir \
+-Wl,-rpath=/software/synopsys/vcs/W-2024.09/linux64/lib -L/software/synopsys/vcs/W-2024.09/linux64/lib \
+-Wl,-rpath-link=./  /usr/lib64/libnuma.so.1 uvm_dpi.o uvm_verdi_dpi.o   objs/amcQw_d.o \
+_3883162_archive_1.so   SIM_l.o      rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o \
+rmar_llvm_0_0.o            -lerrorinf -lsnpsmalloc -lvfs    -lvcsnew -lsimprofile \
+-lvirsim -luclinative /software/synopsys/vcs/W-2024.09/linux64/lib/vcs_tls.o   -Wl,-whole-archive \
+-lvcsucli    -Wl,-no-whole-archive       ./../simv.daidir/vc_hdrs.o  _vcs_pli_stub_.o \
+/software/synopsys/vcs/W-2024.09/linux64/lib/vcs_save_restore_new.o /software/synopsys/verdi/W-2024.09/share/PLI/VCS/LINUX64/pli.a \
+-ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+make[1]: Leaving directory '/project/ai/bugatti/users/pratyush/common_ip_17june/verif/finaltest1/sim/build/csrc' \
+
+CPU time: 10.842 seconds to compile + .284 seconds to elab + 1.002 seconds to link
